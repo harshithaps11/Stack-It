@@ -1,9 +1,6 @@
-<<<<<<< HEAD
+
 # StackIt — Developer Q&A and Collaboration Platform
-=======
-# StackIt - Q&A Forum Platform
- [![Stack-It Live](https://stack-it-hash.vercel.app/)
->>>>>>> 5e9f928f1107eec36da973fdb695f8b94fedd4f5
+
 
 <div align="center">
 
