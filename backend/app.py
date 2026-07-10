@@ -22,7 +22,13 @@ CORS(app,
      methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
+database_url = os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
+if database_url.startswith("postgres://"):
+    database_url = database_url.replace("postgres://", "postgresql+pg8000://", 1)
+elif database_url.startswith("postgresql://"):
+    database_url = database_url.replace("postgresql://", "postgresql+pg8000://", 1)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'super-secret-key')
 
 
