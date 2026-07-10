@@ -36,6 +36,9 @@ db = SQLAlchemy(app)
 jwt = JWTManager(app)
 
 
+with app.app_context():
+    db.create_all()
+
 
 # -- Models --
 class User(db.Model):
@@ -111,10 +114,6 @@ class Vote(db.Model):
 
     # Ensure a user can only vote once per question
     __table_args__ = (db.UniqueConstraint('user_id', 'question_id', name='_user_question_uc'),)
-
-# Ensure database tables are created on application startup (after all models are defined)
-with app.app_context():
-    db.create_all()
 
 # -- Routes --
 
