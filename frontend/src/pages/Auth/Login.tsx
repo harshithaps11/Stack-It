@@ -33,7 +33,7 @@ const Login: React.FC = () => {
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-gradient-to-br from-[#f70776] to-[#680747] rounded-xl flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-bold text-2xl">S</span>
           </div>
           {/* UPDATED: Header text colors now support light/dark mode */}

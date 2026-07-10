@@ -1,6 +1,6 @@
 // src/api/api.ts
 
-const API_URL = "http://127.0.0.1:5000/api";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000/api";
 
 // --- LOGIN ---
 // CHANGED: Takes `email` instead of `username` to match the backend.

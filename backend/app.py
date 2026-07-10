@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -5,17 +6,24 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, UTC
 from sqlalchemy import func
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
 
+cors_origins_raw = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173')
+cors_origins = [origin.strip() for origin in cors_origins_raw.split(',') if origin.strip()]
+
 CORS(app, 
-     origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+     origins=cors_origins,
      allow_headers=["Content-Type", "Authorization"],
      methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
-app.config['JWT_SECRET_KEY'] = 'super-secret-key'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'super-secret-key')
 
 
 db = SQLAlchemy(app)
@@ -38,10 +46,10 @@ class User(db.Model):
 
 
 
-# class Item(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(120))
-#     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+class Item(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 
 # Association table for the many-to-many relationship between Question and Tag
@@ -486,6 +494,9 @@ def accept_answer(answer_id):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    
+    port = int(os.getenv('FLASK_PORT', 5000))
+    debug = os.getenv('FLASK_DEBUG', 'True').lower() in ('true', '1', 't')
+    app.run(host='0.0.0.0', port=port, debug=debug)
 
 
