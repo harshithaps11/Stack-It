@@ -1,5 +1,5 @@
 # StackIt - Q&A Forum Platform
-
+Live = [![Stack-It](https://stack-it-hash.vercel.app/)
 <div align="center">
 
 ![StackIt Logo](https://img.shields.io/badge/StackIt-Q%26A%20Platform-f70776?style=for-the-badge)
