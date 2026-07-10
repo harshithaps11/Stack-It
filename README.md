@@ -1,10 +1,12 @@
-# StackIt - Q&A Forum Platform
+# StackIt — Developer Q&A and Collaboration Platform
 
 <div align="center">
 
-![StackIt Logo](https://img.shields.io/badge/StackIt-Q%26A%20Platform-f70776?style=for-the-badge)
+![StackIt Logo](https://img.shields.io/badge/StackIt-Knowledge%20Sharing-f70776?style=for-the-badge)
 
-A modern, full-stack Q&A forum platform inspired by Stack Overflow, built with Flask and React.
+**A modern, high-performance developer community hub for asking technical questions, sharing code, earning reputation, and building shared knowledge.**
+
+### [🚀 Click Here to Open the Live App](https://stack-it-hash.vercel.app)
 
 [![Flask](https://img.shields.io/badge/Flask-3.1.1-000000?style=flat&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
@@ -669,8 +671,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- Inspired by [Stack Overflow](https://stackoverflow.com/)
-- Built with modern web technologies
+- Built with modern full-stack web technologies (Flask, SQLAlchemy, React, Vite)
 - Icons by [Lucide](https://lucide.dev/)
 - Rich text editing by [Tiptap](https://tiptap.dev/)
 
