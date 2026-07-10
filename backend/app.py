@@ -43,7 +43,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(120), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(120), nullable=False)
+    password = db.Column(db.String(255), nullable=False)
     reputation = db.Column(db.Integer, default=0)
 
     # 'joined date'
@@ -122,8 +122,9 @@ with app.app_context():
 @app.route('/api/init-db', methods=['GET'])
 def init_db():
     try:
+        db.drop_all()  # Reset schema to apply updated column sizes
         db.create_all()
-        return jsonify({'msg': 'Database tables created successfully!'}), 200
+        return jsonify({'msg': 'Database tables reset and created successfully!'}), 200
     except Exception as e:
         return jsonify({'msg': 'Failed to initialize database', 'error': str(e)}), 500
 
