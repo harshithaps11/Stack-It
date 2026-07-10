@@ -2,10 +2,6 @@
 # StackIt — Developer Q&A and Collaboration Platform
 
 
-<div align="center">
-
-![StackIt Logo](https://img.shields.io/badge/StackIt-Knowledge%20Sharing-f70776?style=for-the-badge)
-
 **A modern, high-performance developer community hub for asking technical questions, sharing code, earning reputation, and building shared knowledge.**
 
 ### [🚀 Click Here to Open the Live App](https://stack-it-hash.vercel.app)
