@@ -13,7 +13,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-cors_origins_raw = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173')
+cors_origins_raw = os.getenv('CORS_ORIGINS', '*')
 cors_origins = [origin.strip() for origin in cors_origins_raw.split(',') if origin.strip()]
 
 CORS(app, 
