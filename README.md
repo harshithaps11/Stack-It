@@ -1,6 +1,6 @@
-# 🚀 StackIt — Q&A Forum Platform
 
-<div align="center">
+# StackIt — Developer Q&A and Collaboration Platform
+
 
 **A modern, high-performance developer community hub for asking technical questions, sharing code, earning reputation, and building shared knowledge.**
 
