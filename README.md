@@ -1,181 +1,132 @@
-<<<<<<< HEAD
-# StackIt — Developer Q&A and Collaboration Platform
-=======
-# StackIt - Q&A Forum Platform
- [![Stack-It Live](https://stack-it-hash.vercel.app/)
->>>>>>> 5e9f928f1107eec36da973fdb695f8b94fedd4f5
+# 🚀 StackIt — Q&A Forum Platform
 
 <div align="center">
 
-![StackIt Logo](https://img.shields.io/badge/StackIt-Knowledge%20Sharing-f70776?style=for-the-badge)
-
 **A modern, high-performance developer community hub for asking technical questions, sharing code, earning reputation, and building shared knowledge.**
 
-### [🚀 Click Here to Open the Live App](https://stack-it-hash.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-success?style=for-the-badge&logo=vercel&logoColor=white)](https://stack-it-hash.vercel.app)
+&nbsp;
+[![Flask Backend](https://img.shields.io/badge/Backend-Flask%203.1.1-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+&nbsp;
+[![React Frontend](https://img.shields.io/badge/Frontend-React%2018.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 
-[![Flask](https://img.shields.io/badge/Flask-3.1.1-000000?style=flat&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.1-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+---
+
+### [🔗 Live Application](https://stack-it-hash.vercel.app) | [🛠️ Getting Started](#-getting-started) | [📡 API Documentation](#-api-documentation) | [🗄️ Database Schema](#-database-schema) | [👥 Team](#-team)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## 🎯 Overview
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Backend Setup](#backend-setup)
-  - [Frontend Setup](#frontend-setup)
-- [API Documentation](#-api-documentation)
-- [Database Schema](#-database-schema)
-- [Contributing](#-contributing)
-- [License](#-license)
+**StackIt** is a full-featured developer Q&A forum platform inspired by Stack Overflow. Designed with a robust **Flask** backend REST API and a highly interactive, responsive **React + TypeScript + Tailwind CSS** frontend, StackIt offers a streamlined, fast, and feature-rich user experience for modern developers.
+
+Key highlights include:
+- **JWT Authentication** for route security.
+- **Rich Text Editor (Tiptap)** with markdown formatting and media options.
+- **Reputation & Badge Tracking** system to reward developer contributions.
+- **Dynamic Tag System** to discover and categorize knowledge.
+- **Smooth Theme System** with system-aware dark mode support.
 
 ---
 
-## 🎯 Overview
+## 📸 Screen Previews
 
-**StackIt** is a fully functional Q&A forum platform where users can:
-- Ask and answer technical questions
-- Vote on questions and answers
-- Tag questions for better organization
-- Accept answers to mark questions as resolved
-- Search and filter questions by various criteria
-- Track reputation and badges
+<div align="center">
 
-Built with a Flask REST API backend and a modern React + TypeScript frontend, StackIt provides a seamless user experience with dark mode support, rich text editing, and real-time statistics.
+| 🖥️ Light & Dark Dashboard | 💬 Rich Q&A Interaction |
+| :---: | :---: |
+| ![Dashboard Preview](https://placehold.co/600x400/2d3748/ffffff?text=StackIt+Home+Feed) | ![Q&A Detail Preview](https://placehold.co/600x400/2d3748/ffffff?text=StackIt+Q%26A+Detail) |
+| *Responsive feed with voting, views, and tag metrics* | *Interactive answers, views, and acceptance indicator* |
+
+| 🏷️ Tags Discovery | 👤 User Leaderboard |
+| :---: | :---: |
+| ![Tags Explorer Preview](https://placehold.co/600x400/2d3748/ffffff?text=StackIt+Tags+Explorer) | ![Users Directory Preview](https://placehold.co/600x400/2d3748/ffffff?text=StackIt+User+Leaderboard) |
+| *Tag statistics (question counts, recent activity)* | *Reputation system tracking gold, silver, and bronze badges* |
+
+</div>
 
 ---
 
 ## ✨ Features
 
-### 🔐 Authentication & Authorization
-- User registration with email and username
-- Secure JWT-based authentication
-- Password hashing with Werkzeug
-- Protected routes and API endpoints
+### 🔐 Authentication & Security
+* **Seamless Onboarding:** Standard register/login flows.
+* **JWT tokens:** Secure stateless session management.
+* **Secured Password Hashing:** Powered by `Werkzeug`.
+* **Guarded Endpoints:** Protected API routes for posting, updating, and voting.
 
-### 💬 Question Management
-- **Ask Questions**: Rich text editor with formatting options (bold, italic, lists, links, images)
-- **Tag System**: Multi-tag support for categorizing questions
-- **Voting System**: Upvote/downvote questions
-- **View Tracking**: Automatic view count increment
-- **Sorting Options**: Sort by newest, votes, views, or answers
+### 💬 Rich Question Management
+* **Rich Editor:** Post questions using an interactive Tiptap editor.
+* **Categorization:** Multi-tag support for organizing questions.
+* **Voting Engine:** Upvote and downvote questions to surface high-quality answers.
+* **Interactive Feeds:** Sort questions by *newest*, *votes*, *views*, or *answers*.
+* **Auditing:** Track views automatically.
 
-### ✅ Answer System
-- Post answers to questions
-- Accept answers (question authors only)
-- Accepted answers displayed prominently
-- Answer sorting by acceptance status
-
-### 🏷️ Tags & Discovery
-- Browse all available tags
-- Tag statistics (question count, views, recent activity)
-- Filter questions by tags
-- Dynamic tag suggestions
-
-### 👥 User Features
-- User profiles with reputation scores
-- Badge system (Gold, Silver, Bronze based on reputation)
-- Track questions asked and answers given
-- View accepted answer count
+### ✅ Answer & Reputation System
+* **Write Answers:** Contribute Markdown/Rich text answers.
+* **Accepted Answers:** Question owners can mark answers as accepted to reward contributors.
+* **Gamification:** Users earn reputation points and unlock badges (Gold, Silver, Bronze) based on community contributions.
 
 ### 🎨 UI/UX Features
-- **Dark Mode**: System-aware theme with manual toggle
-- **Responsive Design**: Mobile-first approach with collapsible sidebars
-- **Real-time Search**: Client-side search with query highlighting
-- **Loading States**: Smooth loading indicators
-- **Error Handling**: User-friendly error messages
-
-### 📊 Statistics & Analytics
-- Real-time site statistics (questions, answers, users)
-- Popular tags sidebar
-- Question view counts
-- Answer counts per question
+* **Modern CSS Styling:** Tailored Tailwind CSS layouts with smooth transitions.
+* **Fluid Dark Mode:** Automatic system-aware preferences with manual override toggle.
+* **Interactive Elements:** Real-time search with visual keyword highlighting.
+* **Responsive Layout:** Adaptive sidebar and headers built for mobile, tablet, and desktop screens.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack & Architecture
 
-### Backend
+### Backend Stack
 | Technology | Version | Purpose |
-|------------|---------|---------|
-| **Flask** | 3.1.1 | Web framework |
-| **Flask-SQLAlchemy** | 3.1.1 | ORM for database operations |
-| **Flask-JWT-Extended** | 4.7.1 | JWT authentication |
-| **Flask-CORS** | 6.0.1 | Cross-origin resource sharing |
-| **SQLAlchemy** | 2.0.41 | Database toolkit |
-| **Werkzeug** | 3.1.3 | Password hashing & security |
-| **SQLite** | 3.x | Database (development) |
+| :--- | :--- | :--- |
+| **Flask** | 3.1.1 | Python REST API Web Framework |
+| **Flask-SQLAlchemy** | 3.1.1 | Object Relational Mapping (ORM) |
+| **Flask-JWT-Extended** | 4.7.1 | Session & authentication protection |
+| **Flask-CORS** | 6.0.1 | Cross-origin sharing config |
+| **SQLAlchemy** | 2.0.41 | SQL Database Toolkit |
+| **Werkzeug** | 3.1.3 | Security, utility, & password hashing |
+| **SQLite / PostgreSQL** | - | Persistent data stores |
 
-### Frontend
+### Frontend Stack
 | Technology | Version | Purpose |
-|------------|---------|---------|
-| **React** | 18.3.1 | UI library |
-| **TypeScript** | 5.5.3 | Type safety |
-| **Vite** | 5.4.2 | Build tool & dev server |
-| **React Router** | 7.6.3 | Client-side routing |
-| **TailwindCSS** | 3.4.1 | Utility-first CSS framework |
-| **Tiptap** | 2.26.1 | Rich text editor |
-| **Lucide React** | 0.344.0 | Icon library |
+| :--- | :--- | :--- |
+| **React** | 18.3.1 | Declarative component framework |
+| **TypeScript** | 5.5.3 | Static type safety and autocomplete |
+| **Vite** | 5.4.2 | Dev server and optimized production builder |
+| **React Router** | 7.6.3 | Client-side page routing |
+| **Tailwind CSS** | 3.4.1 | Utility-first application styling |
+| **Tiptap** | 2.26.1 | Rich text editor environment |
+| **Lucide React** | 0.344.0 | Responsive vector iconography |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-stackit(in flask)/
-├── backend/                    # Flask Backend
-│   ├── app.py                 # Main application file
-│   ├── requirements.txt       # Python dependencies
-│   └── instance/
-│       └── db.sqlite3        # SQLite database
+Stack-It/
+├── backend/                   # Python Flask REST API
+│   ├── app.py                 # Main server file & routes
+│   ├── requirements.txt       # Backend package dependencies
+│   ├── Procfile               # Production WSGI process definition
+│   └── .env.example           # Backend environment configuration template
 │
-└── frontend/                   # React Frontend
-    ├── public/
+└── frontend/                  # React Single Page App
     ├── src/
-    │   ├── api/
-    │   │   └── api.ts        # API client functions
-    │   ├── assets/
-    │   ├── components/
-    │   │   ├── Layout/
-    │   │   │   ├── Header.tsx
-    │   │   │   ├── Sidebar.tsx
-    │   │   │   └── MobileSidebar.tsx
-    │   │   ├── QuestionCard.tsx
-    │   │   ├── RichTextEditor.tsx
-    │   │   ├── TagSuggestions.tsx
-    │   │   ├── ThemeToggle.tsx
-    │   │   └── NotificationDropdown.tsx
-    │   ├── contexts/
-    │   │   ├── AuthContext.tsx    # Authentication state
-    │   │   ├── ThemeContext.tsx   # Dark mode state
-    │   │   └── LayoutContext.tsx  # Sidebar state
-    │   ├── pages/
-    │   │   ├── Home.tsx
-    │   │   ├── Popular.tsx
-    │   │   ├── Unanswered.tsx
-    │   │   ├── Tags.tsx
-    │   │   ├── Users.tsx
-    │   │   ├── AskQuestion.tsx
-    │   │   ├── QuestionDetail.tsx
-    │   │   └── Auth/
-    │   │       ├── Login.tsx
-    │   │       └── Register.tsx
-    │   ├── App.tsx
-    │   ├── main.tsx
-    │   └── index.css
-    ├── index.html
-    ├── package.json
-    ├── tailwind.config.js
-    ├── vite.config.ts
-    └── tsconfig.json
+    │   ├── api/               # API clients and helpers
+    │   ├── assets/            # Project static assets & icons
+    │   ├── components/        # Reusable UI components & layouts
+    │   ├── contexts/          # Auth, Theme, and Layout state providers
+    │   ├── pages/             # App page views (Home, Tags, Profile, etc.)
+    │   ├── App.tsx            # Main application router root
+    │   ├── index.css          # Tailwind CSS style overrides
+    │   └── main.tsx           # Dom initialization
+    ├── index.html             # Single page template index
+    ├── package.json           # Frontend script definitions
+    ├── tailwind.config.js     # Tailwind setup
+    └── vercel.json            # Vercel deployment configurations
 ```
 
 ---
@@ -183,107 +134,79 @@ stackit(in flask)/
 ## 🚀 Getting Started
 
 ### Prerequisites
+Make sure you have the following installed:
+* **Python** 3.8+
+* **Node.js** 16+
+* **npm** or **yarn**
 
-Before running this project, ensure you have the following installed:
-
-- **Python** 3.8 or higher ([Download](https://www.python.org/downloads/))
-- **Node.js** 16 or higher ([Download](https://nodejs.org/))
-- **npm** or **yarn** package manager
-- **Git** (optional, for cloning)
+---
 
 ### Backend Setup
 
-1. **Navigate to the backend directory:**
+1. **Navigate to backend root:**
    ```bash
    cd backend
    ```
 
-2. **Create a virtual environment:**
+2. **Setup virtual environment:**
    ```bash
-   # Windows
+   # Windows:
    python -m venv venv
    venv\Scripts\activate
 
-   # macOS/Linux
+   # macOS/Linux:
    python3 -m venv venv
    source venv/bin/activate
    ```
 
-3. **Install dependencies:**
+3. **Install python packages:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Configure the application** (Optional):
-   
-   Edit `app.py` to customize settings:
-   ```python
-   # JWT Secret Key (Change in production!)
-   app.config['JWT_SECRET_KEY'] = 'your-secret-key-here'
-   
-   # CORS Origins (Update for production)
-   CORS(app, origins=["http://localhost:5173"])
-   
-   # Database URI
-   app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+4. **Configure Environment variables:**
+   Copy `.env.example` to `.env` and set your secrets:
+   ```bash
+   cp .env.example .env
    ```
 
-5. **Run the Flask server:**
+5. **Start Flask API:**
    ```bash
    python app.py
    ```
-   
-   The backend will start on `http://127.0.0.1:5000`
+   The backend API will listen on: **`http://127.0.0.1:5000`**
 
-6. **Database initialization:**
-   
-   The database will be automatically created on first run. Tables include:
-   - Users
-   - Questions
-   - Answers
-   - Tags
-   - Votes
+---
 
 ### Frontend Setup
 
-1. **Navigate to the frontend directory:**
+1. **Navigate to frontend root:**
    ```bash
    cd frontend
    ```
 
-2. **Install dependencies:**
+2. **Install node dependencies:**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
-3. **Configure API endpoint** (if needed):
-   
-   Edit `src/api/api.ts`:
-   ```typescript
-   const API_URL = "http://127.0.0.1:5000/api";
-   ```
-
-4. **Run the development server:**
+3. **Run local development client:**
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
-   
-   The frontend will start on `http://localhost:5173`
+   The client application will start at: **`http://localhost:5173`**
 
-5. **Build for production:**
+4. **Production Build:**
    ```bash
    npm run build
-   # or
-   yarn build
    ```
 
 ---
 
 ## 📡 API Documentation
+
+<details>
+<summary><b>📖 Expand API Endpoint Details</b></summary>
 
 ### Authentication Endpoints
 
@@ -527,10 +450,14 @@ Response: 200 OK
   "popularTags": ["python", "flask", "react", "typescript", "javascript"]
 }
 ```
+</details>
 
 ---
 
-## 🗄 Database Schema
+## 🗄️ Database Schema
+
+<details>
+<summary><b>💾 Expand DB SQL Schema Details</b></summary>
 
 ### Users Table
 ```sql
@@ -602,90 +529,62 @@ CREATE TABLE vote (
     FOREIGN KEY (question_id) REFERENCES question(id)
 );
 ```
+</details>
 
 ---
-
-
-
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
+Contributions are welcome! Follow these steps to submit a PR:
+1. **Fork** the repository.
+2. Create your feature branch (`git checkout -b feature/amazing-feature`).
+3. Commit your changes (`git commit -m 'feat: Add some amazing feature'`).
+4. Push to the branch (`git push origin feature/amazing-feature`).
+5. Open a **Pull Request**.
 
-1. **Fork the repository**
-2. **Create a feature branch:**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit your changes:**
-   ```bash
-   git commit -m 'Add some amazing feature'
-   ```
-4. **Push to the branch:**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. **Open a Pull Request**
-
-### Development Guidelines
-
-- Follow the existing code style
-- Write meaningful commit messages
-- Add comments for complex logic
-- Test your changes thoroughly
-- Update documentation as needed
+### Guidelines
+* Adhere to clean code practices and existing styling metrics.
+* Provide comments for non-trivial logic blocks.
+* Keep routes, database tables, and state updates secure.
 
 ---
 
-## 🐛 Known Issues & Future Enhancements
+## 🐛 Known Issues & Planned Enhancements
 
 ### Known Issues
-- Answer voting system not yet implemented
-- User online status is currently hardcoded
-- No email verification for registration
+- Answer upvoting/downvoting is not yet supported.
+- Active user online status uses static tracking.
+- Email authentication verification is not integrated.
 
-### Planned Features
-- [ ] Email verification
-- [ ] Password reset functionality
-- [ ] User profile pages
-- [ ] Comment system
-- [ ] Answer voting
-- [ ] Notification system
-- [ ] Search with full-text indexing
-- [ ] Markdown support alongside rich text
-- [ ] User badges and achievements
-- [ ] Question bookmarking
-- [ ] PostgreSQL/MySQL support
-- [ ] Docker containerization
-- [ ] API rate limiting
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+### Planned Enhancements
+- [ ] Email registration validation.
+- [ ] User password recovery flows.
+- [ ] Profile customization options.
+- [ ] Direct comments threads for questions/answers.
+- [ ] Comprehensive search features with database indexing.
+- [ ] Containerized workspace via Docker.
 
 ---
 
 ## 👥 Team
 
-**Team Name:** Oblique  
-**Contact:** bhadauriasuraj2004@gmail.com
+* **Team Name:** Oblique
+* **Support Email:** [bhadauriasuraj2004@gmail.com](mailto:bhadauriasuraj2004@gmail.com)
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Built with modern full-stack web technologies (Flask, SQLAlchemy, React, Vite)
-- Icons by [Lucide](https://lucide.dev/)
-- Rich text editing by [Tiptap](https://tiptap.dev/)
+* Designed around [Stack Overflow](https://stackoverflow.com/) design mechanics.
+* Vector Icons powered by [Lucide React](https://lucide.dev/).
+* Styled components crafted via [Tailwind CSS](https://tailwindcss.com/).
+* Rich text fields powered by [Tiptap](https://tiptap.dev/).
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by Team Oblique**
-
-⭐ Star this repo if you find it helpful!
+**Made with ❤️ by Team Oblique**  
+⭐ Star this repository if you find it helpful!
 
 </div>
