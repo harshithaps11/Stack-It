@@ -566,12 +566,6 @@ Contributions are welcome! Follow these steps to submit a PR:
 
 ---
 
-## 👥 Team
-
-* **Team Name:** Oblique
-* **Support Email:** [bhadauriasuraj2004@gmail.com](mailto:bhadauriasuraj2004@gmail.com)
-
----
 
 ## 🙏 Acknowledgments
 
